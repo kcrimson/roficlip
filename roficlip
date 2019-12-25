@@ -3,7 +3,7 @@
 # Verify clipster is running, fail otherwise
 clipster -o > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-  echo 'Failed to retrieve history from Clipster, please ensure daemon is running!'
+  notify-send -u critical 'Failed to retrieve history from Clipster, please ensure daemon is running!'
   exit 1
 fi
 
